@@ -9,15 +9,16 @@ function Automovil(marca, modelo, color, anio, titular) {
 let automoviles = [];
 
 function agregarCarro() {
-        let elementoMarca = document.getElementById("nMarca").value;
-        let elementoModelo = document.getElementById("nModelo").value;
-        let elementoColor = document.getElementById("nColor").value;
-        let elementoAnio = document.getElementById("nAnio").value;
-        let elementoTitular = document.getElementById("nTitular").value;
+    let elementoMarca = document.getElementById("nMarca").value;
+    let elementoModelo = document.getElementById("nModelo").value;
+    let elementoColor = document.getElementById("nColor").value;
+    let elementoAnio = document.getElementById("nAnio").value;
+    let elementoTitular = document.getElementById("nTitular").value;
 
-        let nCarro = new Automovil(elementoMarca, elementoModelo,elementoColor, elementoAnio, elementoTitular)
-        automoviles.push(nCarro)
-        alert("El Automóvil ha sido agregado")
+    let nCarro = new Automovil(elementoMarca, elementoModelo, elementoColor, elementoAnio, elementoTitular)
+    automoviles.push(nCarro)
+    alert("El Automóvil ha sido agregado")
+
 }
 
 
@@ -35,9 +36,13 @@ Automovil.prototype.enceder = function () {
 };
 
 function verRegistros() {
-    let lista = document.getElementById("registros")
+    let lista = document.getElementById("registros");
+
+    // Limpiar contenido actual de la lista
+    lista.innerHTML = ""; // O puedes usar: lista.textContent = "";
+
     for (let automovil of automoviles) {
-        let item = document.createElement("li")
+        let item = document.createElement("li");
         item.innerText = automovil.verAuto();
         lista.appendChild(item);
     }
