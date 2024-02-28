@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro Automotor</title>
+</head>
+
+<body>
+    <header>
+        <h1>Registro Automotor</h1>
+    </header>
+
+    <main>
+        <h2>Agrega tu vehiculo</h2>
+        <div>
+            <h4>Marca: </h4>
+            <input type="text" id="nMarca">
+            <h4>Modelo: </h4>
+            <input type="text" id="nModelo">
+            <h4>Color: </h4>
+            <input type="text" id="nColor">
+            <h4>Año: </h4>
+            <input type="text" id="nAnio">
+            <h4>Titular: </h4>
+            <input type="text" id="nTitular">
+        </div>
+        <button onclick="agregarCarro()">Agregar Vehiculo</button>
+        <ul id="registros"></ul>
+        <button onclick="verRegistros()">Ver Registros</button>
+    </main>
+
+    <footer>
+        <h4>By: Ricardo Gutierrez</h4>
+    </footer>
+</body>
+<script src="codigo.js"></script>
+
+</html>
